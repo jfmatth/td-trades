@@ -6,7 +6,7 @@ class TDSymbolAdmin(admin.ModelAdmin):
     list_display = ('pk','symbol','transactions')
 
 class EntryAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('symbol', 'rawline',)
 
 admin.site.register(TDTransaction, EntryAdmin)
 admin.site.register(TDSymbol, TDSymbolAdmin)
